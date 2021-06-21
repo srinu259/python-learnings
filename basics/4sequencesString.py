@@ -64,3 +64,14 @@ print()
 print("--Center-alignment-with-cap(^)--")
 for i in range(1, 13):
     print("No. {0:2} square is {1:^4} and cube is {2:^4}".format(i, i ** 2, i ** 3))
+
+days = "Mon, Tue, Wed, Thu, Fri, Sat, Sun"
+print(days[::5])
+
+data = "1:A, 2:B, 3:C, 4:D, 5:E, 6:F, 7:G, 8:H"
+print(data[::5])
+print(data[0:-1:5])
+print(data[:-1:5])
+
+flower = 'blue violet'
+print('blue' in flower)
