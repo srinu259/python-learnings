@@ -10,5 +10,3 @@ for char in number:
     if not char.isnumeric():
         sequence = sequence + char
 print(sequence)
-
-char.is
