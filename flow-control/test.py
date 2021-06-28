@@ -22,3 +22,11 @@ if (18 <= age < 31):
     print("Right, have a good day at school")
 else:
     print("Time to get busy in life!")
+
+# CONTINUE challenge
+i = 0
+for i in range(0,20):
+    if i%3 == 0 or i%5 == 0:
+        continue
+    else:
+        print(i)
