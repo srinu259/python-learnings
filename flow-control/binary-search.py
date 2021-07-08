@@ -45,19 +45,10 @@ else:
             mid_number = (start_number + end_number) // 2
 
 print("Sytem guessed {} in {} round(s) ".format(guess_a_number, counter))
-"""
-1-100
-guess=30|low=1|high=100|mid=50
-counter1|guess < mid|low=1|high=50|mid=25
-counter2|guess > mid|low=25|high=high|mid=37
-counter3|guess < mid|low=
-"""
 
 
-
-#     guess = int(input())
-#     counter += 1
-#     if guess < system_guess:
-#         print("Guess higher number: ")
-#     elif guess > system_guess:
-#         print("Guess lower number: ")
+# 1-100
+# guess=30|low=1|high=100|mid=50
+# counter1|guess < mid|low=1|high=50|mid=25
+# counter2|guess > mid|low=25|high=high|mid=37
+# counter3|guess < mid|low=

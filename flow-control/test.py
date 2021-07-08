@@ -30,3 +30,17 @@ for i in range(0,20):
         continue
     else:
         print(i)
+
+# FLOW CONTROL challenge
+option = "0"
+while option != "4":
+    if option in "123":
+        print("The option you selected is {} ".format(option))
+    else:
+        print("Please choose your option from list below:")
+        print("1. Learn Python")
+        print("2. Learn Java")
+        print("3. Learn R")
+        print("4. EXIT")
+    option = input()
+
