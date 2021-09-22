@@ -13,3 +13,4 @@ print(anotherString)
 
 print("C:\\Users\am\\notes.txt")
 print(r"C:\\Users\am\\notes.txt")
+# r means raw-string. Treat everything as rawstring and all escapecodes are ignored

@@ -48,7 +48,7 @@ for c in range(1, len(available_parts)+1):
 while choice != "0":
     if choice in valid_choice:
         if available_parts[int(choice)-1] in computer_parts:
-            print("Removing {} to computer parts".format(choice))
+            print("Removing {} from computer parts".format(choice))
             computer_parts.remove(available_parts[int(choice)-1])
             print("Requested parts {}".format(computer_parts))
         else:

@@ -16,7 +16,7 @@ choose_an_exit = ""
 while choose_an_exit not in available_exits:
     choose_an_exit = input("Please choose an exit: ")
 
-print("Well, gald you know where you are going")
+print("Well, glad you know where you are going")
 
 # WHILE with BREAK
 print()
@@ -28,4 +28,4 @@ while choose_an_exit.casefold() not in available_exits:
         print("Game Over")
         break
 
-print("Well, gald you know where you are going")
+print("Well, glad you know where you are going")

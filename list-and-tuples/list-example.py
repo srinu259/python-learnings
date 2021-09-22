@@ -19,3 +19,26 @@ odd = [1, 3, 5, 7, 9]
 print("Even min: {} and max: {}".format(min(even), max(even)))
 print("Odd min: {} and max: {}".format(min(odd), max(odd)))
 print("Mississippi".count("iss"))
+
+print()
+empty_list=[]
+numbers = even + odd
+print(numbers)
+print(sorted(numbers))
+print(numbers)
+
+print()
+digits = sorted('4365128970')
+print(digits)
+
+# A list does not sort the input values
+more_numbers = list(numbers)
+# python 2 way of copying list
+# more_numbers = numbers[:]
+# python 3 way of copying list
+# more_numbers = numbers.copy()
+print(more_numbers)
+
+# ID of numbers is not same as more_numbers
+print(numbers is more_numbers)
+print(numbers == more_numbers)

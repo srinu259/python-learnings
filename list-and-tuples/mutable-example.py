@@ -21,4 +21,3 @@ print("Updated computer_parts ID {}".format(id(computer_parts)))
 print("Another computer_parts list {}".format(another_computer_parts))
 # ID remains same as above as list is a mutable object
 # Similar to JavaScript objects mutable objects in python will have the same ID even after object is updated
-
