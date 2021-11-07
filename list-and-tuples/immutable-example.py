@@ -20,3 +20,5 @@ name = "Python 3.x"
 another_name = name
 print(id(name))
 print(id(another_name))
+another_name = "Python 3.8"
+print(id(another_name))

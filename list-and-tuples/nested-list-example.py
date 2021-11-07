@@ -47,5 +47,3 @@ for menu_list in menu:
         if not item == "spam":
             print (item)
     print()
-
-
