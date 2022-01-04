@@ -99,3 +99,14 @@ for opt in ["--skip-broken", "--refresh", "--allowerasing", "--nobest"]:
 command = "sudo yum update -y" + options
 print(command)
 
+# master/worker
+targetServer = "pso-12-250.sac.swinfra.net"
+subHostNames = [
+    {
+        "name": "worker",
+        "hostNames": ["pso-12-251.sac.swinfra.net", "pso-12-252.sac.swinfra.net", "pso-12-253.sac.swinfra.net"]
+    }]
+
+for subHost in subHostNames:
+    if 'worker' in subHost["name"] and targetServer in subHost["hostNames"]:
+        print("Exists")
