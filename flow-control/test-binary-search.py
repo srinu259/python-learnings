@@ -4,7 +4,6 @@ guess_number = int(input("Enter the number you guessed: "))
 
 if last_number <= first_number or guess_number < first_number or guess_number > last_number:
     print("You are not interested in playing the game")
-
 else:
     print(f"Beginning binary search to guess your number {guess_number}")
     i = 1
