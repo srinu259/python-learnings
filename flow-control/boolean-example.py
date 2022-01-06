@@ -16,7 +16,12 @@ else:
 
 # BOOLEAN with TRUTH values
 if 0:
-    print("Code will never reach here. True here!")
+    print("Code will never reach here. False here!")
+else:
+    print("True here!")
+
+if 1:
+    print("Code will always reach here. True here!")
 else:
     print("False here!")
 

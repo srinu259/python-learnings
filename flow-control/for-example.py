@@ -24,7 +24,7 @@ for i in range(0,10,2):
     #print("i is now {}".format(i))
     print(i)
 
-# FOR loop with RANGE and STEP
+# FOR loop with RANGE and NEGATIVE STEP
 print()
 for i in range(10,0,-2):
     #print("i is now {}".format(i))

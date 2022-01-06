@@ -9,7 +9,9 @@ string2 = "is "
 string3 = "it"
 
 print(string1 + string2 + string3)
-print("This " "is " "it")  # Few bad things about python is this example. It would have been clear with a concatenation operator
+
+# Few bad things about python is this example. It would have been clear with a concatenation operator
+print("This " "is " "it")
 
 print("Hello" * 5) # Well, what is the need for this ?
 today = "thursday"
@@ -20,7 +22,7 @@ print("day" in "today")     # True
 print("day" in "Hello")     # False
 
 age = 39
-print("My age is", age , "years")
+print("My age is", age, "years")
 #print("My age is " + age + " years") # This fails as string cannot be concatenated to integer
 print("My age is " + str(age) + " years")
 print("My age is {0} years".format(age))
@@ -73,6 +75,7 @@ print(data[::5])
 print(data[0:1:5])
 print(data[0:-1:5])
 print(data[:-1:5])
+print(data[0:-1:2])
 
 flower = 'blue violet'
 print('blue' in flower)

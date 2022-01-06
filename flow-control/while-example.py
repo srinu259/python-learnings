@@ -27,5 +27,5 @@ while choose_an_exit.casefold() not in available_exits:
     if choose_an_exit.casefold() == 'quit':
         print("Game Over")
         break
-
-print("Well, glad you know where you are going")
+    elif choose_an_exit.casefold() in available_exits:
+        print("Well, glad you know where you are going")
