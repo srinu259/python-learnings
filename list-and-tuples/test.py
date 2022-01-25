@@ -1,3 +1,5 @@
+import random
+
 data = [
     "Andromeda - Shrub",
     "Bellflower - Flower",
@@ -89,3 +91,28 @@ print(albums[1][3][5][1])
 print(albums[2][2])
 print(albums[3][3][3][0])
 print(albums[2][3][1])
+
+
+# print the following pattern
+# *****
+# ****
+# ***
+# **
+# *
+
+for i in range(5, 0, -1):
+    print('*'*i)
+
+
+def get_weather_data():
+    return random.randrange(90, 110)
+
+
+# list comprehensions: without walrus operator
+hot_temps = [temp for temp in range(20) if get_weather_data() >= 100]
+print(hot_temps)
+
+# list comprehensions: walrus operator
+hot_temps = [temp for _ in range(20) if (temp := get_weather_data()) >= 100]
+print(hot_temps)
+
