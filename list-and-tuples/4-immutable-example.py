@@ -8,8 +8,9 @@
 # - bytes
 
 # Following below example
-# In brilliant languages like Java, name will have the same id, its value will be changed
+# Probably in Java, name will have the same id, its value will be changed
 # But in python you bind a value to a variable, so when value changes, id also is changed
+# This is how immutable properties behave in python
 
 name = "Python"
 another_name = name

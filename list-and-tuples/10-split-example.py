@@ -1,5 +1,6 @@
 # split returns a list
-# split breaks a string based on spaces, new line characters and tabs
+# split by default breaks a string based on spaces, new line characters and tabs
+# you can always provide a char on which it has to be split
 
 panagram = "The quick brown fox jumps over the lazy dog"
 print(panagram.split())

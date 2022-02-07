@@ -50,3 +50,41 @@ def find_max(nums):
 
 
 print(find_max([1, 12, 3]))
+
+# spam challenge
+menu1 = [
+    ["egg", "bacon"],
+    ["egg", "sausage", "bacon"],
+    ["egg", "spam"],
+    ["egg", "bacon", "spam"],
+    ["egg", "bacon", "sausage", "spam"],
+    ["spam", "bacon", "sausage", "spam"],
+    ["spam", "sausage", "spam", "bacon", "spam", "tomato", "spam"],
+    ["spam", "egg", "spam", "spam", "bacon", "spam"],
+]
+
+for item_list in menu1:
+    for item in item_list:
+        if item == "spam":
+            item_list.remove("spam")
+            break
+
+print(menu)
+
+temp = '9 234,563,123,567,036,857'
+print(temp.split())
+
+temp = '9,234,563,123,567,036,857'
+print(temp.split(','))
+
+temp_list = []
+for temp_item in temp[:]:
+    if temp_item == ',':
+        temp_list.append(' ')
+    else:
+        temp_list.append(temp_item)
+print(temp_list)
+
+# #use list-comprehension to do the same code
+# for temp_item in temp[:]
+# if temp_item == ',' then ' ' else temp_item

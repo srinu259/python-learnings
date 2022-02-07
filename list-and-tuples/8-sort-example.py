@@ -9,7 +9,6 @@ even.sort(reverse=True)
 print(even)
 
 
-
 # Why is output None for the below print statements
 # This is because even.sort() function does not return anything
 # It only modifies the original list
