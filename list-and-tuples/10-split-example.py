@@ -48,6 +48,3 @@ print(new_list)
 for index in range(len(value)):
     value[index] = int(value[index])
 print(value)
-
-
-

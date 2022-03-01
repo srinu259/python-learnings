@@ -69,6 +69,7 @@ for item_list in menu1:
             item_list.remove("spam")
             break
 
+print(menu1)
 print(menu)
 
 temp = '9 234,563,123,567,036,857'
@@ -88,3 +89,48 @@ print(temp_list)
 # #use list-comprehension to do the same code
 # for temp_item in temp[:]
 # if temp_item == ',' then ' ' else temp_item
+
+# spam challenge
+menu2 = [
+    ["egg", "bacon"],
+    ["egg", "sausage", "bacon"],
+    ["egg", "spam"],
+    ["egg", "bacon", "spam"],
+    ["egg", "bacon", "sausage", "spam"],
+    ["spam", "bacon", "sausage", "spam"],
+    ["spam", "sausage", "spam", "bacon", "spam", "tomato", "spam"],
+    ["spam", "egg", "spam", "spam", "bacon", "spam"]
+]
+
+for new_menu in menu2:
+    for new_item in new_menu[::-1]:
+        if new_item == "spam":
+            new_menu.remove("spam")
+    print(new_menu)
+print(menu2)
+
+menu3 = ["spam", "egg", "spam", "spam", "bacon", "spam"]
+print(menu3[::-1])
+for i in range(len(menu3)-1, -1, -1):
+    print(menu3[i])
+
+numbers = "9,234,563,123,567,036,857"
+sep = ","
+n_list = []
+for n in numbers:
+    if n in sep:
+        n = " "
+    else:
+        n = int(n)
+    n_list.append(n)
+print(n_list)
+
+numbers = "9,234,563,123,567,036,857"
+num_list = []
+for n in numbers.split(","):
+    num_list.append(int(n))
+print(num_list)
+
+separators = ","
+value = " ".join(char if char not in separators else " " for char in numbers).split()
+print(value)

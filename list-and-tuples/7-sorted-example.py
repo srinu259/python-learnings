@@ -2,7 +2,7 @@
 # sorted does not change the original input
 # whereas sort function modifies the original list
 
-pangram = 'The quick brown fox jumps over laxy dog'
+pangram = 'The quick brown fox jumps over lazy dog'
 print(sorted(pangram))
 print(pangram)
 
@@ -13,7 +13,7 @@ print(numbers)
 numbers.sort()
 print(numbers)
 
-# pangram = 'The quick brown fox jumps over laxy dog'
+# pangram = 'The quick brown fox jumps over lazy dog'
 # sorted_list = sorted(pangram)
 # sorted = sorted(pangram)
 # text = 'The quick brownie is a humble pie'
@@ -21,7 +21,9 @@ print(numbers)
 # This gives an error, because of line 18 python rebinded sorted function to a list
 # python does not give error for the key words, it will rebind them in the program
 
-# key=str.casefold will sort the characters / list is case-sensitive order
+# key=str.casefold will sort the characters / list is case-sensitive order (lower)
+# Both sorted and sort have a key parameter to specify a function to be called on each element prior to comparision
+# Note that you will only mention the function name, that means without ()
 print(sorted(pangram, key=str.casefold))
 names = ["John",
          "Annie",
