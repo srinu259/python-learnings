@@ -134,3 +134,29 @@ print(num_list)
 separators = ","
 value = " ".join(char if char not in separators else " " for char in numbers).split()
 print(value)
+
+
+selected_parts = []
+computer_parts = ["Computer",
+                   "Monitor",
+                   "Keyboard",
+                   "Mouse",
+                   "Floppy",
+                   "HDMI Cable"
+                   ]
+
+print("Please select the parts you need from the below list:")
+for part_id, part in enumerate(computer_parts):
+    print("{0}. {1}".format(part_id+1, part))
+print("0. Exit")
+choice = input()
+print(f"{choice}")
+
+while choice != '0':
+    if choice in '123456':
+        if computer_parts[int(choice)-1] in selected_parts:
+            selected_parts.remove(computer_parts[int(choice)-1])
+        else:
+            selected_parts.append(computer_parts[int(choice)-1])
+    choice = input()
+print(selected_parts)
