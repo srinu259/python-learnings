@@ -149,7 +149,8 @@ print("Please select the parts you need from the below list:")
 for part_id, part in enumerate(computer_parts):
     print("{0}. {1}".format(part_id+1, part))
 print("0. Exit")
-choice = input()
+# choice = input()
+choice = "0"
 print(f"{choice}")
 
 while choice != '0':
@@ -160,3 +161,65 @@ while choice != '0':
             selected_parts.append(computer_parts[int(choice)-1])
     choice = input()
 print(selected_parts)
+
+albums = (
+    ("Thriller", "Michael Jackson", 1982,
+     [(1, "Beat It"),
+      (2, "Billie Jean"),
+      (3, "Human Nature"),
+      (4, "P.Y.T. (Pretty Young Thing)"),
+      (5, "The Lady in My Life")
+      ]),
+    ("Bad", "Michael Jackson", 1987,
+     [(1, "Bad"),
+      (2, "The Way You Make Me Feel"),
+      (3, "Dirty Diana"),
+      (4, "Smooth Criminal"),
+      (5, "Man in the Mirror"),
+      (6,  "I Just Can't Stop Loving You")
+      ]),
+    ("Blood On Dance Floor", "Michael Jackson", 1992,
+     [(1, "Blood on the Dance Floor"),
+      (2, "Morphine"),
+      (3, "Superfly Sister"),
+      (4, "Money"),
+      (5, "2 Bad"),
+      (6, "Stranger in Moscow"),
+      (7, "Earth Song"),
+      (8, "You Are Not Alone")
+      ]),
+    ("History", "Michael Jackson", 1995,
+     [(1, "Scream"),
+      (2, "They Don't Care About Us"),
+      (3, "Stranger in Moscow"),
+      (4, "Come Together"),
+      (5, "You Are Not Alone")
+      ]),
+    ("Invincible", "Michael Jackson", 2002,
+     [(1, "You Rock My World"),
+      (2, "Butterflies"),
+      (3, "Speechless"),
+      (4, "2000 Watts"),
+      (5, "You Are My Life")]
+     ))
+
+print("Select an album to play: ")
+for album_id, album in enumerate(albums):
+    print("{0}. {1}".format(album_id+1, album[0]))
+print("0. Exit")
+album_id = input()
+
+while album_id != '0':
+    if album_id in '12345':
+        print(f"Select song to play from album: {albums[int(album_id)-1][0]}")
+        for song_id, song in albums[int(album_id)-1][3]:
+            print("{0}. {1}".format(song_id, song))
+        song_id = input()
+        print(f"Playing song: {albums[int(album_id)-1][3][int(song_id)-1][1]}....")
+        album_id = "6"
+    elif album_id != '0':
+        print("Select an album to play: ")
+        for album_id, album in enumerate(albums):
+            print("{0}. {1}".format(album_id+1, album[0]))
+        print("0. Exit")
+        album_id = input()
