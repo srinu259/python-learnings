@@ -203,23 +203,30 @@ albums = (
       (5, "You Are My Life")]
      ))
 
-print("Select an album to play: ")
-for album_id, album in enumerate(albums):
-    print("{0}. {1}".format(album_id+1, album[0]))
-print("0. Exit")
-album_id = input()
-
-while album_id != '0':
+while True:
+    print("Select an album to play: ")
+    for album_id, album in enumerate(albums):
+        print("{0}. {1}".format(album_id+1, album[0]))
+    print("0. Exit")
+    album_id = input()
+    songlist = ""
     if album_id in '12345':
         print(f"Select song to play from album: {albums[int(album_id)-1][0]}")
+        print("-"*20)
         for song_id, song in albums[int(album_id)-1][3]:
             print("{0}. {1}".format(song_id, song))
+            songlist = songlist + str(song_id)
         song_id = input()
-        print(f"Playing song: {albums[int(album_id)-1][3][int(song_id)-1][1]}....")
-        album_id = "6"
-    elif album_id != '0':
-        print("Select an album to play: ")
-        for album_id, album in enumerate(albums):
-            print("{0}. {1}".format(album_id+1, album[0]))
-        print("0. Exit")
-        album_id = input()
+
+        if song_id in songlist:
+            print(f"Playing song: {albums[int(album_id)-1][3][int(song_id)-1][1]}....")
+            print("="*30)
+        else:
+            print("Invalid choice, start with album again")
+        print("="*30)
+    elif album_id == 0:
+        break
+    else:
+        print("Invalid choice, select again")
+        print("="*30)
+
