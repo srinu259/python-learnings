@@ -95,6 +95,7 @@ for name, artist, year, songs in albums:
     print(name, artist, year, songs)
 
 print()
+print(albums)
 print(albums[2])
 print(albums[2][3])
 print(albums[2][3][1])
