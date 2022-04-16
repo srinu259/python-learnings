@@ -88,3 +88,15 @@ print(temp_list)
 # #use list-comprehension to do the same code
 # for temp_item in temp[:]
 # if temp_item == ',' then ' ' else temp_item
+
+name = 'PSO\ROMIE\Testing'
+child_folder = name.split('\\')
+print(child_folder)
+#
+# folder = 'None'
+# for child in child_folder:
+#     if folder is 'None':
+#         folder = 'A'
+
+
+

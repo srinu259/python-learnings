@@ -13,7 +13,7 @@ def sum_eo(n, t):
         elif t == 'o' and num%2 != 0:
             total += num
 
-    return total
+    # return total
 
 
 print(sum_eo(10, 'e'))
