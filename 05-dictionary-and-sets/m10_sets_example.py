@@ -59,6 +59,7 @@ car_colors = ["red", "black", "red", "silver", "brown", "silver"]
 car_unique_colors = set(car_colors)
 # this does not preserve the order
 print(car_unique_colors)
+print(list(car_unique_colors))
 car_unique_colors = list(dict.fromkeys(car_colors))
 # this preserves the order
 print(car_unique_colors)

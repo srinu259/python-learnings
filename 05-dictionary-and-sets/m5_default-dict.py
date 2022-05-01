@@ -1,4 +1,4 @@
-from contents import pantry
+from m4_contents import pantry
 
 chicken = pantry.setdefault("chicken", 0)
 print(f"chicken: {chicken}")

@@ -1,4 +1,4 @@
-from contents import pantry, recipes, recipes_tuple, recipes_dict
+from m4_contents import pantry, recipes, recipes_tuple, recipes_dict
 
 # print(pantry)
 # print(recipes)

@@ -24,7 +24,9 @@ print(g)
 # a dictionary key has to be immutable, else it is considered invalid
 # h = {(1, ["a", "b", "c"]): 1}
 # print(h)
-
+#
+# i = {(1, ("a", "b", "c")): 1}
+# print(i)
 
 # tuple is always immutable, but if the tuple contains mutable objects, then those objects can be changed
 tup1 = (1, ["a", "b"])
