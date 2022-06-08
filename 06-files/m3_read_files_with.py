@@ -23,7 +23,7 @@ print(line[-1:0:-1])
 
 # readline method reads one line at a time
 # this is similar to reading file and iterating over the fileobject
-# but make sure to include a breaking condition, else you are into infinite loop
+# but make sure to include a breaking condition if you are looping, else you are into infinite loop
 with open('m1_invictus_poem.txt') as poem:
     while True:
         line = poem.readline()
