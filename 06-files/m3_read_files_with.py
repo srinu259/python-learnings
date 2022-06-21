@@ -2,6 +2,7 @@
 # python will automatically close the file
 # python will do the memory management
 with open('m1_invictus_poem.txt', 'r') as poem:
+    print(type(poem))
     for line in poem:
         print(line.rstrip())
 
@@ -23,10 +24,16 @@ print(line[-1:0:-1])
 
 # readline method reads one line at a time
 # this is similar to reading file and iterating over the fileobject
-# but make sure to include a breaking condition if you are looping, else you are into infinite loop
 with open('m1_invictus_poem.txt') as poem:
     while True:
         line = poem.readline()
+        # without this breaking condition you will end up in infinite loop
         if line.casefold() in 'invictus':
             break
+        print(line.rstrip())
+
+with open('m1_invictus_poem.txt') as poem:
+    line = poem.readline()
+    while line:
+        line = poem.readline()
         print(line.rstrip())

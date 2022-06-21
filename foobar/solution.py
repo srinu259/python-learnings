@@ -1,6 +1,5 @@
 import math
 
-
 def solution(idx: int = 0) -> int:
     min_number = 1
     max_number = 10001
