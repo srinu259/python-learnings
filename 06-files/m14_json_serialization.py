@@ -1,3 +1,4 @@
+# https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/
 import json
 
 languages = [
@@ -10,6 +11,7 @@ languages = [
 ]
 
 # json.dump is used for creating a JSON file
+# here we create a new file m15_lang.json
 with open("m15_lang.json", "w") as lang:
     json.dump(languages, lang)
 
