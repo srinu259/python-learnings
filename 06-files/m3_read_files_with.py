@@ -27,7 +27,7 @@ print(line[-1:0:-1])
 with open('m1_invictus_poem.txt') as poem:
     while True:
         line = poem.readline()
-        # without this breaking condition you will end up in infinite loop
+        # without this breaking condition you will end up in infinite loop because of while condition
         if line.casefold() in 'invictus':
             break
         print(line.rstrip())

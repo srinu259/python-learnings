@@ -34,6 +34,7 @@ attributes = ['delimiter', 'quoting', 'quotechar', 'escapechar',
 for attribute in attributes:
     print(f"{attribute}: {getattr(country_dialect, attribute)}")
 
+# repr represents printable representation of an object
 print("*"*80)
 for attribute in attributes:
     print(f"{attribute}: {repr(getattr(country_dialect, attribute))}")
