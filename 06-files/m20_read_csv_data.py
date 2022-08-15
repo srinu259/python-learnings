@@ -7,9 +7,6 @@ with open(file_to_open, encoding='utf-8', newline='') as file:
     print(f'Header Row: {header}')
     for row in reader:
         print(row)
-    # line = file.readline()
-    # while line:
-    #     print(line)
-    #     line = file.readline()
-
-
+    # lines = file.readlines()
+    # for line in lines:
+    #     print(line.strip('\n').split(','))

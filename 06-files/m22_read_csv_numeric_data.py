@@ -1,5 +1,5 @@
 # quoting provides you the flexibility to set the numeric value in the data
-# by default csv.reader converts every field to string, this may not be idea situation if you need numbers
+# by default csv.reader converts every field to string, this may not be ideal situation if you need numbers
 # csv.QUOTE_NONNUMERIC means all non-numeric columns are converted to numbers (float)
 # So if you have a string column that does not have quotes, it will lead to error
 import csv
