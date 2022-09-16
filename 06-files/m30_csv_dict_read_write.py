@@ -20,7 +20,7 @@ with open(file_read, 'r', encoding='utf-8') as olympic_read, \
                 new_dict[key.casefold()] = int(value)
             else:
                 new_dict[key.casefold()] = value
-        print(f"    {new_dict}", file=olympic_write)
+        print(f"    {new_dict},", file=olympic_write)
     print("]", file=olympic_write)
 
 

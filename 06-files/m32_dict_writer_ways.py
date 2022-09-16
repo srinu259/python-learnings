@@ -95,3 +95,21 @@ medals_table = [
     {'country': 'Moldova', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
     {'country': 'Syria', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
 ]
+
+# We can write to the file in two ways
+# 1. row by row
+# 2. dump full data into the file
+
+headers = ['country', 'gold', 'silver', 'bronze', 'rank']
+file_write = 'm33_country_medals.txt'
+with open(file_write, 'w', encoding='utf-8', newline='') as data:
+    writer = csv.DictWriter(data, fieldnames=headers)
+    writer.writeheader()
+
+    # Method-1: write row by row
+    # for row in medals_table:
+    #     writer.writerow(row)
+
+    # Method-2: dump full data into file
+    writer.writerows(medals_table)
+

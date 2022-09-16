@@ -95,3 +95,15 @@ medals_table = [
     {'country': 'Moldova', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
     {'country': 'Syria', 'gold': 0, 'silver': 0, 'bronze': 1, 'rank': 86},
 ]
+
+
+def sort_key(d: dict) -> str:
+    return d['country']
+
+
+file_to_write = 'm35_country_medals_sorted.txt'
+headers = ['country', 'gold', 'silver', 'bronze']
+with open(file_to_write, 'w', encoding='utf-8', newline='') as data:
+    writer = csv.DictWriter(data, fieldnames=headers, extrasaction='ignore')
+    writer.writeheader()
+    writer.writerows(sorted(medals_table, key=sort_key))
