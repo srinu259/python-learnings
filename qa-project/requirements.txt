@@ -1,0 +1,6 @@
+testcontainers[oracle-free]
+pytest
+cx_Oracle
+json
+jinja2
+time
