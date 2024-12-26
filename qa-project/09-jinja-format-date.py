@@ -1,3 +1,5 @@
+import json
+
 from jinja2 import Template, Environment, Undefined
 from datetime import datetime
 
@@ -14,31 +16,38 @@ def format_date_time(value, format=""):
 
 
 def get_value(key, dictionary):
-    print("{}: {}".format(dictionary, key))
     return dictionary.get(key, '')
 
 
-def execute():
-    row_data = ("01-DEC-2024", "01-DEC-2024", "abc")
-    company_dict = {
-        "def": "def_c",
-        "abc": "abc_c"
-    }
+def execute(company_json, department_json):
+    row_data = ("01-DEC-2024", "01-DEC-2024", "qa", "hr")
+    company_dict = json.loads(company_json)
+    department_dict = json.loads(department_json)
+
     env = Environment()
     env.filters["format_date_time"] = format_date_time
     env.filters["dict_value"] = get_value
     person_json = """{
-            "var1": "{{ data[0]|format_date_time("unixtimestamp") }}",
-            "var2": "{{ data[1]|format_date_time }}",
-            "var3": "{{ data[2]|dict_value(company_dict) }}" 
+            "date_unix": "{{ data[0]|format_date_time("unixtimestamp") }}",
+            "date": "{{ data[1]|format_date_time }}",
+            "company": "{{ data[2]|dict_value(company_dict) }}",
+            "department": "{{ data[3]|dict_value(department_dict) }}" 
     }"""
     template = env.from_string(person_json)
-    rendered_form = template.render(data=row_data, company_dict=company_dict)
+    rendered_form = template.render(
+        data=row_data,
+        company_dict=company_dict,
+        department_dict=department_dict)
     print(rendered_form)
 
 
-company_dict = '''{
-        "def": "def_c",
-        "abc": "abc_c"
+company_json = '''{
+        "qa": "qa_c",
+        "hp": "hp_c"
     }'''
-execute()
+department_json = '''{
+        "sales": "sales_c",
+        "it": "it_c",
+        "hr": "hr_c"
+    }'''
+execute(company_json, department_json)
