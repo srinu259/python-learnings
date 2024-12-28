@@ -4,6 +4,7 @@ import json
 from jinja2 import Template
 def execute(dbUsername, dbPassword, dbHostname, dbPort, dbServiceName, dbClientDirectory):
 
+    db_connection = None
     db_config = {}
     db_config["db_user"] = dbUsername
     db_config["db_password"] = dbPassword
@@ -37,7 +38,8 @@ def execute(dbUsername, dbPassword, dbHostname, dbPort, dbServiceName, dbClientD
         }
     except Exception as e:
         release_db_connection(db_connection)
-        return {"error_message":"Unable to establish DB connection or Query execution "+e, "error":e}
+        return {"error_message":"Error in DB connection or Query execution "+e, "error":e}
+
 
 def get_db_connection(config):
     oracledb.init_oracle_client(lib_dir= config['client_lib_dir'])

@@ -1,6 +1,6 @@
 import json
 
-from jinja2 import Template, Environment, Undefined
+from jinja2 import Environment
 from datetime import datetime
 
 
